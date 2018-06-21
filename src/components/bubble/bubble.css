@@ -1,0 +1,11 @@
+.bubble {
+    border-radius: 30px;
+    background: url("../../assets/img/bubble_unpopped.png");
+    background-size: cover;
+}
+
+.bubble_popped {
+    border-radius: 30px;
+    background: url("../../assets/img/bubble_popped.png");
+    background-size: cover;
+}

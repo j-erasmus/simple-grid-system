@@ -1,0 +1,21 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background-color: #585652;
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.title {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-top: 45px;
+    width: 191px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}

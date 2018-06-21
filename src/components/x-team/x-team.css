@@ -1,0 +1,7 @@
+.smiley {
+    border-radius: 30px;
+    background: url("../../assets/img/x_team.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
