@@ -21,3 +21,7 @@ Check your http://localhost:3000/ or `open http://localhost:3000/`
 * **Bubble:** This is a component I created for demonstration purposes. This will get rendered in the grid and can be interacted with by the end-user.
 
 * **XTeam:** This is a component I created for demonstration purposes. This will get rendered in the grid. 
+
+## Preview
+<img src="https://preview.ibb.co/gx5FAT/image.png" align="middle">
+
