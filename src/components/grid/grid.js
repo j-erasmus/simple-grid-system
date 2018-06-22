@@ -8,8 +8,8 @@ export class Grid extends React.Component {
   /**
    * this component renders a data grid on the screen
    * @param {array} columns - columns rendered on the screen, each column contains x number of cells
-   * @param {number} columns - the number of columns the grid consists of
-   * @param {number} rows - the number of rows the grid consists of
+   * @param {number} totalColumns - the number of columns the grid consists of
+   * @param {number} totalRows - the number of rows the grid consists of
    * @param {array} data - the data to be rendered on the screen
    * */
 
