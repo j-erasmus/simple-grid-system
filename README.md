@@ -1,6 +1,8 @@
 # Simple Grid System
 
-This is a simple grid system that I built.
+A generic grid system that can render any data-set that has x/y coordinates. It can also render a custom template for each cell within the grid. 
+
+For demo purposes this instance renders a series of interactive Bubbles and X-Team logos.
 
 ## Getting Started
 
