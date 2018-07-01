@@ -16,7 +16,7 @@ export class Main extends React.Component {
     return (
       <div>
         <span className="title">- Jacques Erasmus -</span>
-        <Grid totalColumns="41" totalRows="21" data={gridData} cellTemplate={<Bubble size="30" />} />
+        <Grid totalColumns="41" totalRows="21" data={gridData} debugMode={true} cellTemplate={<Bubble size="30"/>} />
       </div>
     );
 
