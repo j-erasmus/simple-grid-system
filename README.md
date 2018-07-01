@@ -6,13 +6,18 @@ For demo purposes this instance renders a series of interactive Bubbles and X-Te
 
 ## Getting Started
 
-Run:
+Run (demo):
 ```
 npm install
 npm start
 ```
 
 Check your http://localhost:3000/ or `open http://localhost:3000/`
+
+Implementation:
+```
+<Grid totalColumns="10" totalRows="10" data={gridData} cellTemplate={<MyTemplate/>} />
+```
 
 ## Classes
 
