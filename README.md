@@ -25,5 +25,5 @@ Check your http://localhost:3000/ or `open http://localhost:3000/`
 * **XTeam:** This is a component I created for demonstration purposes. This will get rendered in the grid. 
 
 ## Preview
-<img src="https://preview.ibb.co/gx5FAT/image.png" align="middle">
+<img src="https://s33.postimg.cc/wctaq44z3/Preview.png" align="middle">
 
