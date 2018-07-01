@@ -1,7 +1,7 @@
 import React from 'react';
 /**/
 import './bubble.css';
-
+/**/
 const BUBBLE_POP_URL = 'http://soundbible.com/grab.php?id=2067&type=mp3';
 const BUBBLE_INFLATE_URL = 'http://soundbible.com/grab.php?id=2044&type=mp3';
 
@@ -44,7 +44,7 @@ export class Bubble extends React.Component {
 
   togglePopBubble() {
 
-    if(this.state.isPopped) {
+    if (this.state.isPopped) {
       return;
     }
 

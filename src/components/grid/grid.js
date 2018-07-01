@@ -2,6 +2,7 @@ import React from 'react';
 /**/
 import './grid.css';
 import {GridCellModel} from './models/grid-cell-model';
+import {GridStats} from "./grid-stats/grid-stats";
 
 export class Grid extends React.Component {
 
@@ -11,29 +12,42 @@ export class Grid extends React.Component {
    * @param {number} totalColumns - the number of columns the grid consists of
    * @param {number} totalRows - the number of rows the grid consists of
    * @param {array} data - the data to be rendered on the screen
+   * @param {boolean} debugMode - enables grid stats
    * */
 
   constructor(props) {
     super(props);
-    this.state = {columns: []};
+    this.state = {columns: [], coordinates: '0,0'};
   }
 
   render() {
 
+    let totalCells = 0;
+
     let grid = this.state.columns.map((column, colIndex) => {
 
-      let cells = column.map((cell, rowIndex) => {
-        return (cell.cellTemplate || this.props.cellTemplate)
+      let cells = column.map((cell, cellIndex) => {
+        totalCells++;
+        return (<div key={cellIndex} onMouseOver={()=>this.onCellMouseOver(cell)}> {cell.cellTemplate || this.props.cellTemplate} </div>)
       });
 
       return (<div key={colIndex} className="grid_column" style={{width: this.props.cellSize + 'px'}}> {cells} </div>)
-
     });
 
+    let gridStats = this.props.debugMode ? <GridStats coordinates={this.state.coordinates} totalColumns={this.props.totalColumns} totalRows={this.props.totalRows} totalCells={totalCells}/> : null;
+
     return (
-      <div className="grid_wrapper"> {grid} </div>
+      <div>
+        {gridStats}
+        <div className="grid_wrapper">{grid}</div>
+      </div>
     );
 
+  }
+
+  onCellMouseOver(cell) {
+    let coordinates = `${cell.x},${cell.y}`;
+    this.setState({coordinates});
   }
 
   componentDidMount() {

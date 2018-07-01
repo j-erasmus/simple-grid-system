@@ -2,6 +2,7 @@
     border-radius: 30px;
     background: url("../../assets/img/bubble_unpopped.png");
     background-size: cover;
+    box-shadow: inset -1px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .bubble_popped {
