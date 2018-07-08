@@ -7,7 +7,7 @@ export class XTeam extends React.Component {
   render() {
 
     return (
-      <div className="smiley"></div>
+      <div className="x-team"></div>
     );
 
   }

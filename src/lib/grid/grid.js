@@ -11,6 +11,8 @@ export class Grid extends React.Component {
    * @param {array} columns - columns rendered on the screen, each column contains x number of cells
    * @param {number} totalColumns - the number of columns the grid consists of
    * @param {number} totalRows - the number of rows the grid consists of
+   * @param {number} width - the width of the grid
+   * @param {number} height - the height of the grid
    * @param {array} data - the data to be rendered on the screen
    * @param {boolean} debugMode - enables grid stats
    * */
@@ -38,8 +40,8 @@ export class Grid extends React.Component {
 
     return (
       <div>
+        <div className="grid_wrapper" style={{width: this.props.width, height: this.props.height}}>{grid}</div>
         {gridStats}
-        <div className="grid_wrapper">{grid}</div>
       </div>
     );
 
@@ -50,7 +52,7 @@ export class Grid extends React.Component {
     this.setState({coordinates});
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.init();
   }
 
@@ -124,6 +126,8 @@ export class Grid extends React.Component {
   }
 
   renderData(dataSet) {
+
+    if(!dataSet) return;
 
     let highestCoordinates = this.determineHighestCoordinates(dataSet);
     let newColumns = highestCoordinates.x - this.props.totalColumns; // If the data set has more columns than what is already rendered, this would be the amount of new columns to be added

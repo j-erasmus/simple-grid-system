@@ -1,4 +1,4 @@
-import {AbstractBaseModel} from '../../../common/abstract/abstract-base-model';
+import {AbstractBaseModel} from "../../common/abstract/abstract-base-model";
 
 export class GridCellModel extends AbstractBaseModel {
 
