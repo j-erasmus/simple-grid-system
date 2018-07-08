@@ -1,5 +1,5 @@
 {
-  "name": "npm-react-grid",
+  "name": "react-grid-component",
   "version": "1.0.0",
   "description": "A simple react component for rendering any data-set that has x/y coodrinates.",
   "main": "lib/index.js",
