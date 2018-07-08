@@ -1,33 +1,67 @@
-# Simple Grid System
+# React Grid Component
 
 A generic grid system that can render any data-set that has x/y coordinates. It can also render a custom template for each cell within the grid. 
 
 For demo purposes this instance renders a series of interactive Bubbles and X-Team logos.
 
+<a href="https://jakesrassie.github.io/simple-grid-system/" target="_blank">DEMO</a>
+
 ## Getting Started
 
-Run (demo):
+Installation:
 ```
-npm install
-npm start
-```
-
-Check your http://localhost:3000/ or `open http://localhost:3000/`
-
-Implementation:
-```
-<Grid totalColumns="10" totalRows="10" data={gridData} cellTemplate={<MyTemplate/>} />
+npm install react-grid-component --save-dev
 ```
 
-## Classes
+Usage (basic):
+```
+import {Grid} from 'react-grid-component';
 
-* **Main:** This is the main entry point of the application and composes an instance of the Grid component together with its data-set.
+export class Main extends React.Component {
 
-* **Grid:** A generic grid system that can render any data-set that has x/y coordinates. It can also render a custom template for each cell within the grid. In this instance, the grid renders a series of interactive Bubbles and X-Team logos.
+  render() {
+    return (<Grid totalColumns="41" totalRows="21" debugMode={true} cellTemplate={<YourTemplateGoesHere>} />);
+  }
+```
 
-* **Bubble:** This is a component I created for demonstration purposes. This will get rendered in the grid and can be interacted with by the end-user.
+Usage (advanced):
+```
+import {Grid} from 'react-grid-component';
 
-* **XTeam:** This is a component I created for demonstration purposes. This will get rendered in the grid. 
+export class Main extends React.Component {
+
+  render() {
+
+    let gridData = this.retrieveGridData();
+
+    return (<Grid totalColumns="41" totalRows="21" debugMode={true} data={gridData} cellTemplate={<YourDefaultTemplate/>} />);
+  }
+
+  retrieveGridData() {
+    return [
+      {x: 2, y: 5, cellTemplate: <YourAmazingTemplate/>},
+      {x: 4, y: 1, cellTemplate: <YourAmazingTemplate/>},
+      {x: 3, y: 7, cellTemplate: <AnotherAmazingTemplate/>}
+    ];
+  }
+}
+```
+
+## Properties
+
+columns {array} - columns rendered on the screen, each column contains x number of cells
+
+totalColumns {number} - the number of columns the grid consists of
+
+totalRows {number} - the number of rows the grid consists of
+
+width {number} - the width of the grid
+
+height {number} - the height of the grid
+
+data {array} - the data to be rendered on the screen
+
+debugMode {boolean} - enables grid stats
 
 ## Preview
 <img src="http://funkyimg.com/i/2J6xr.png" align="middle">
